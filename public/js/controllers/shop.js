@@ -3,7 +3,7 @@ var shopApp = angular.module('crudCartApp')
 
 			$scope.things = ShopService.getAllThings();
 			$scope.addPost = function(){
-				$location.path('/new');
+				$location.path('/newItem');
 			};
 
 			// @params {thing} is an data object from cart.html object
