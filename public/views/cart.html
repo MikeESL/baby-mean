@@ -1,0 +1,17 @@
+<div><p>this page is here</p></div>
+<div class="forSale" ng-repeat="thing in things">
+    
+      <ul>
+        <li><h4>{{thing.name | uppercase}}</h4> 
+
+          <ul>
+            <li><h5>{{thing.description}}</h5></li>
+            
+            <li><h5>{{thing.price | currency}}</h5></li>
+            <button ng-click="">Add To Cart</button>
+            
+          </ul> 
+          </li>   
+      </ul>
+
+  </div>
