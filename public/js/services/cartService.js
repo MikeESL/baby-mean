@@ -1,6 +1,6 @@
 angular.module('crudCartApp')
 	.factory('ShopService', function($resource){
-		return $resource('api/collections/demotiy', {},
+		return $resource('api/collections/baubles', {},
 			{
 				getAllThings: {
 					method: 'GET',
