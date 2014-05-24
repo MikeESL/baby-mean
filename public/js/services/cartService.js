@@ -1,15 +1,34 @@
-angular.module('crudCartApp')
+'use strict';
+angular.module('ngDay2App')
 	.factory('ShopService', function($resource){
 		return $resource('api/collections/baubles', {},
 			{
-				getAllThings: {
+				queryBaub: {
 					method: 'GET',
 					isArray: true
 				},
-				createThing: {
+				createBaub: {
 					method: 'POST'
 				}
 			});
+	})
+	.factory('EditService', function($resource){
+		return $resource('api/collections/baubles/:id',
+		{
+			id: '@_id'
+		},
+		{
+			show: {
+				method: 'GET'
+			},
+			edit:{
+				method: 'PUT'
+			},
+			delete:{
+				method: 'DELETE'
+			}
+			}
+			)
 	});
 
-// if not correct change: files moved in finder, routes, URL	
+	

@@ -1,11 +1,11 @@
-'use strict';
+// 'use strict';
 
-var baublesApp = angular.module('crudCartApp');
-  baublesApp.controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [ 
-    ];
+// var baublesApp = angular.module('crudCartApp');
+//   baublesApp.controller('MainCtrl', function ($scope) {
+//     $scope.awesomeThings = [ 
+//     ];
 
-});
+// });
 
 
       

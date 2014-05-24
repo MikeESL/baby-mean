@@ -28,7 +28,7 @@ angular
         templateUrl: 'views/blog-editDetail.html',
         controller: 'PostCtrl'
       })
-  // begin shopping cart apps from other project    
+  // ----- begin shopping cart routes ------ //    
       .when('/admin', {
         templateUrl: 'views/admin.html',
         //controller: 'MainCtrl'
