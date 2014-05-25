@@ -17,7 +17,7 @@ angular.module('ngDay2App')
 		$location.path('/cart');
 	};
 	$scope.edit = function(){
-		EditService.edit($scope.post);
+		EditService.edit($scope.bauble);
 		$location.path('/cart');
 	};
 });
