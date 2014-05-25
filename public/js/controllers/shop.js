@@ -12,9 +12,11 @@ angular.module('ngDay2App')
 	$scope.baubles = ShopService.queryBaub();
 })
 .controller('EditBaubCtrl', function($scope, $location, $routeParams, EditService){
+	$scope.bauble = EditService.show({ id: $routeParams.id});
 	$scope.delete = function(){
 		EditService.delete({ id: $routeParams.id});
 		$location.path('/cart');
+		$location.path('/cart-admin')
 	};
 	$scope.edit = function(){
 		EditService.edit($scope.bauble);
