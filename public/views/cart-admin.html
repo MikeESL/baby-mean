@@ -1,0 +1,16 @@
+<div data-ng-repeat="bauble in baubles">
+    
+      <ul>
+        <li><h4>{{bauble.name | uppercase}}</h4> 
+
+          <ul>
+            <li><h5>{{bauble.description}}</h5></li>
+            
+            <li><h5>{{bauble.price | currency}}</h5></li>
+            <button ng-click="">Add To Cart</button>
+            
+          </ul> 
+          </li>   
+      </ul>
+
+  </div>

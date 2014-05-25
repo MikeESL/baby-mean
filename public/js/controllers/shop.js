@@ -7,6 +7,7 @@ angular.module('ngDay2App')
 	$scope.newBauble = function(bauble) {
 		ShopService.createBaub(bauble)
 		$location.path('/cart')
+		$location.path('/cart-admin')
 	};
 	$scope.baubles = ShopService.queryBaub();
 })
