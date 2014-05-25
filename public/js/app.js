@@ -49,6 +49,10 @@ angular
         templateUrl: 'views/cart-admin-edit.html',
         controller: 'EditBaubCtrl'
       })
+      .when('/bauble/:id/delete', {
+        templateUrl: 'views/cart-delete.html',
+        controller: 'EditBaubCtrl'
+      })
       .when('/details', {
         templateUrl: 'views/details.html',
         controller: 'BaubCtrl'
