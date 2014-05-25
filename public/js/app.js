@@ -55,7 +55,7 @@ angular
       })
       .when('/:id/edit', {
         templateUrl: 'views/edit.html',
-        controller: 'BaubCtrl'
+        controller: 'EditBaubCtrl'
       })
       .otherwise({
         redirectTo: '/'
