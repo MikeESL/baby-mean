@@ -9,6 +9,10 @@
   <h3 class="text-muted">blog & buy handmade jewelry</h3>
 </div>
 <input type="text" data-ng-model="bauble.name" value="{{bauble.name}}">
-<input type="text" data-ng-model="bauble.price" value="{{bauble.price}}">
+<input type="text" placeholder="add image URL" data-ng-model="bauble.img1">
+		<input type="text" placeholder="add image URL" data-ng-model="bauble.img2">
+		<input type="text" placeholder="add image URL" data-ng-model="bauble.img3">
+
 <textarea data-ng-model="bauble.description">{{bauble.description}}</textarea>
+<input type="text" data-ng-model="bauble.price" value="{{bauble.price}}">
 <button data-ng-click="edit()">Update Item</button>

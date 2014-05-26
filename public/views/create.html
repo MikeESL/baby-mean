@@ -2,8 +2,11 @@
 <div class="row">
 	<div class="col-lg-12">
 		<input type="text" placeholder="add item name" data-ng-model="bauble.name">
-		<input type="text" placeholder="add item price" data-ng-model="bauble.price">
+		<input type="text" placeholder="add image URL" data-ng-model="bauble.img1">
+		<input type="text" placeholder="add image URL" data-ng-model="bauble.img2">
+		<input type="text" placeholder="add image URL" data-ng-model="bauble.img3">
 		<textarea placeholder="add description" cols="35" rows="2" data-ng-model="bauble.description"></textarea>
+		<input type="text" placeholder="add item price" data-ng-model="bauble.price">
 		<button data-ng-click="newBauble(bauble)">Add Item</button>
 	</div>
 
