@@ -17,9 +17,17 @@
 <div>
   <div ng-repeat="bauble in baubles">
     <h4>{{bauble.name}}: {{bauble.quantity}} ea</h4>
-    <p>{{bauble.price * bauble.quantity | currency}}<p>
-  </div>
-  <h3>Total: {{total}}</h3>
+    <p>{{bauble.price * bauble.quantity | currency}} Total<p>
+  
+
+  <ul class="editCart">
+  	<li><a href="#/cart/{{bauble._id}}/edit">Change Order </a></li>
+  	<li> | </li>
+  	<li><a href="#/cart/{{bauble._id}}/delete">Remove Order</a></li>
+  </ul>	
+</div>
+ 
 </div>
 
-<a ng-href="#/cart"><button class="btn btn-success"> Return to Shopping</button></a>
+
+	<a ng-href="#/cart"><button class="btn btn-success"> Return to Shopping</button></a>

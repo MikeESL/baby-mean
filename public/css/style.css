@@ -10,4 +10,9 @@ a {
 	display: block;
 	
 }
-
+.editCart{
+	list-style: none;
+}
+.editCart li{
+	display: inline;
+}
