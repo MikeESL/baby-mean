@@ -10,22 +10,31 @@
 </div>
 
 
+
 <div data-ng-repeat="bauble in baubles">
+
     
-      <ul>
-        <li><h4>{{bauble.name | uppercase}}</h4> 
+      
+        <h4>{{bauble.name | uppercase}}</h4> 
+        <img ng-src="{{bauble.img1}}"></img>
+        <h5>{{bauble.price | currency}}</h5>
+        <div> <a href="#/bauble/{{bauble._id}}/edit">Edit</a> | <a href="#/bauble/{{bauble._id}}/delete">Delete</a>
+         </div> 
 
-          <ul>
-            <li><img ng-src="{{bauble.img1}}"></img></li>
-            <li><img ng-src="{{bauble.img2}}"></img></li>
-            <li><img ng-src="{{bauble.img3}}"></img></li>
-            <li><h5>{{bauble.description}}</h5></li>
-            
-            <li><h5>{{bauble.price | currency}}</h5></li>
-            <a href="#/bauble/{{bauble._id}}/edit">Edit</a> | <a href="#/bauble/{{bauble._id}}/delete">Delete</a>
-            
-          </ul> 
-          </li>   
-      </ul>
+        <div ng-controller="ViewsCtrl as tab">
+            <ul class="tabs">
+              <li ng-class"{active:tab.isSelected(0)}"><a href ng-click="tab.selectTab(0)">See Another View</a></li>
+              <li ng-class"{active:tab.isSelected(1)}"><a href ng-click="tab.selectTab(1)">See Another View</a></li>
+              <li ng-class"{active:tab.isSelected(2)}"><a href ng-click="tab.selectTab(2)">Read Description</a></li>
+            </ul>
+            <div class="tabsView" ng-show="tab.isSelected(0)"><img ng-src="{{bauble.img2}}"></img>
+            </div>
+            <div class="tabsView" ng-show="tab.isSelected(1)"><img ng-src="{{bauble.img3}}"></img>
+            </div>
+            <div class="tabsView" ng-show="tab.isSelected(2)"><h6>{{bauble.description}}</h6>
+            </div>
+               
+      
 
-  </div>
+        </div>
+</div>
