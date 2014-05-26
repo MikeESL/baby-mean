@@ -29,6 +29,40 @@ angular.module('ngDay2App')
 			}
 			}
 			)
-	});
+	})
+// ---- actual cart services ------ //
+
+    .factory('CartSvc', function($resource) {
+		return $resource('api/collections/shoppingcart',
+			{},
+			{
+				queryCart: { 
+					method: 'GET', 
+					isArray: true 
+				},
+				create: { 
+					method: 'POST'
+				}
+			});
+	})
+	.factory('EditCartSvc', function($resource) {
+		return $resource('api/collections/shoppingcart/:id',
+			{
+				id: '@_id'
+			},
+			{
+				show: {
+				   method: 'GET'
+				},
+				edit: { 
+					method: 'PUT'
+				},
+				delete: { 
+					method: 'DELETE'
+				}
+			}
+			)
+	})
+
 
 	

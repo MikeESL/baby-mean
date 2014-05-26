@@ -1,0 +1,25 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">home</a></li>
+    <li><a ng-href="#/admin">admin</a></li>
+    <li class="active"><a ng-href="#/cart">shop</a></li>
+    <li><a ng-href="#/blog">blog</a></li>
+   
+  </ul>
+  <h3 class="text-muted">blog & buy handmade jewelry</h3>
+</div>
+<div>
+  <h2>Your Shopping Cart</h2>
+</div>
+
+
+
+<div>
+  <div ng-repeat="bauble in baubles">
+    <h4>{{bauble.name}}: {{bauble.quantity}} ea</h4>
+    <p>{{bauble.price * bauble.quantity | currency}}<p>
+  </div>
+  <h3>Total: {{total}}</h3>
+</div>
+
+<a ng-href="#/cart"><button class="btn btn-success"> Return to Shopping</button></a>

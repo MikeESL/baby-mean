@@ -53,13 +53,13 @@ angular
         templateUrl: 'views/cart-delete.html',
         controller: 'EditBaubCtrl'
       })
-      .when('/details', {
-        templateUrl: 'views/details.html',
-        controller: 'BaubCtrl'
+      .when('/add', {
+        templateUrl: 'views/shoppingcart.html',
+        controller: 'CartCtrl'
       })
-      .when('/:id/edit', {
+      .when('/cart/:id/edit', {
         templateUrl: 'views/edit.html',
-        controller: 'EditBaubCtrl'
+        controller: 'EditCartCtrl'
       })
       .otherwise({
         redirectTo: '/'
