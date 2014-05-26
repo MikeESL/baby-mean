@@ -20,11 +20,10 @@
     <p>{{bauble.price * bauble.quantity | currency}} Total<p>
   
 
-  <ul class="editCart">
-  	<li><a href="#/cart/{{bauble._id}}/edit">Change Order </a></li>
-  	<li> | </li>
-  	<li><a href="#/cart/{{bauble._id}}/delete">Remove Order</a></li>
-  </ul>	
+  <div class="editCart">
+
+  	<a href="#/add/{{bauble._id}}/delete">Remove Order</a>
+  </div>	
 </div>
  
 </div>
