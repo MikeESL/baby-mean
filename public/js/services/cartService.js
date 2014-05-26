@@ -40,7 +40,7 @@ angular.module('ngDay2App')
 					method: 'GET', 
 					isArray: true 
 				},
-				create: { 
+				createCartItem: { 
 					method: 'POST'
 				}
 			});

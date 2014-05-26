@@ -1,13 +1,13 @@
   'use strict'
 
   angular.module('ngDay2App')
-  .controller('CartCtrl', function ($scope, $location, CartSvc) {
+  .controller('CartCtrl', function($scope, $location, CartSvc){
 
     $scope.addBauble = function() {
       $location.path('/cart');
     };
     $scope.addedBauble = function(bauble) {
-      CartSvc.create(bauble)
+      CartSvc.createCartItem(bauble)
       $location.path('/add');
     };
     $scope.baubles = CartSvc.queryCart();

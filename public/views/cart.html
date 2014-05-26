@@ -29,14 +29,15 @@
             </div>
             <div class="tabsView" ng-show="tab.isSelected(3)"><h6>{{bauble.description}}</h6>
             </div>
+        </div>
                
-       <div>
+      <div>
         <p>Quantity</p>
-        <input type="number" ng-model="product.quantity">
-        <button ng-click="addBauble(bauble)" class="btn btn-sm btn-success">Add to Cart</button>
+        <input type="number" ng-model="bauble.quantity">
+        <button data-ng-click="addedBauble(bauble)" class="btn btn-success">Add to Cart</button>
       </div>
 
-        </div>
+        
 </div>
 <a ng-href="#/add"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
 
