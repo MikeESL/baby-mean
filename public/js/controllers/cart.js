@@ -12,10 +12,11 @@
     };
     $scope.baubles = CartSvc.queryCart();
   })
-  .controller('EditCartCtrl', function($scope, $location, $routeParams, EditCartSvc){
+  .controller('EditCartCtrl', function($scope, $location, $routeParams,$log, EditCartSvc){
 
     $scope.bauble = EditCartSvc.show({ id: $routeParams.id });
     $scope.delete = function(){ 
+      $log($routeParams.id);
       EditCartSvc.delete({ id: $routeParams.id });
       $location.path('/add');
     };
