@@ -14,17 +14,18 @@
 
 
 
-<div>
+
   <div ng-repeat="bauble in baubles">
-    <h4>{{bauble.name}}: {{bauble.quantity}} ea</h4>
+    <h4>{{bauble.name | uppercase}}: {{bauble.quantity}} each</h4>
     <p>{{bauble.price * bauble.quantity | currency}} Total<p>
   
 
-  <div class="editCart">
+  
+		<div><a href="#/add/{{bauble._id}}/delete">Delete</a>
+         </div>
+  	
+  	
 
-  	<a href="#/add/{{bauble._id}}/delete">Remove Order</a>
-  </div>	
-</div>
  
 </div>
 
