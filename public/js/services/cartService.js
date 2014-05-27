@@ -57,7 +57,7 @@ angular.module('ngDay2App')
 				edit: { 
 					method: 'PUT'
 				},
-				deleteCart: { 
+				delete: { 
 					method: 'DELETE'
 				}
 			}
