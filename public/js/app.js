@@ -57,8 +57,8 @@ angular
         templateUrl: 'views/shoppingcart.html',
         controller: 'CartCtrl'
       })
-      .when('/cart/:id/edit', {
-        templateUrl: 'views/edit.html',
+      .when('/add/:id/delete', {
+        templateUrl: 'views/shopping-delete.html',
         controller: 'EditCartCtrl'
       })
       .otherwise({
