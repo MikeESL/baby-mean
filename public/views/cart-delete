@@ -1,5 +1,0 @@
-<div>
-	<h1>Are you sure you want to delete?</h1>
-	
-	<a ng-click="delete()">Delete</a> | <a href="#/cart-admin">Go Back</a>
-</div>
