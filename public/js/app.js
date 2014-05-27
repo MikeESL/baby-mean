@@ -6,7 +6,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'ui.bootstrap'
+    //'ui.bootstrap'
+    //'ngDay5App.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -60,7 +61,7 @@ angular
       })
       .when('/add/:id/delete', {
         templateUrl: 'views/shopping-delete.html',
-        controller: 'EditCartCtrl'
+        // controller: 'EditCartCtrl'
       })
       .otherwise({
         redirectTo: '/'

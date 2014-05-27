@@ -18,7 +18,6 @@
 
         <div ng-controller="ViewsCtrl as tab">
             <ul class="tabs">
-              <li ng-class"{active:tab.isSelected(0)}"></li>
               <li ng-class"{active:tab.isSelected(1)}"><a href ng-click="tab.selectTab(1)">See Another View</a></li>
               <li ng-class"{active:tab.isSelected(2)}"><a href ng-click="tab.selectTab(2)">See Another View</a></li>
               <li ng-class"{active:tab.isSelected(3)}"><a href ng-click="tab.selectTab(3)">Read Description</a></li>
