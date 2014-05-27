@@ -45,7 +45,7 @@ angular.module('ngDay2App')
 				}
 			});
 	})
-	.factory('EditCartSvc', function($resource) {
+	.factory('EditCartSvc', function($resource){
 		return $resource('api/collections/shoppingcart/:id',
 			{
 				id: '@_id'
@@ -62,7 +62,7 @@ angular.module('ngDay2App')
 				}
 			}
 			)
-	})
+	});
 
 
 	
