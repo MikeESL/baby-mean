@@ -6,8 +6,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    //'ui.bootstrap'
-    //'ngDay5App.directives'
+    'ui.bootstrap',
+    'ngDay5App.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -60,10 +60,12 @@ angular
         controller: 'CartCtrl'
       })
       .when('/add/:id/delete', {
-        templateUrl: 'views/shopping-delete.html',
-        // controller: 'EditCartCtrl'
+        templateUrl: 'views/shopping-delete.html'
+        
       })
       .otherwise({
         redirectTo: '/'
       });
   });
+
+angular.module('ngDay5App.directives', []);

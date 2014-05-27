@@ -33,8 +33,10 @@ angular.module('ngDay2App')
 // ---- actual cart services ------ //
 
     .factory('CartSvc', function($resource) {
-		return $resource('api/collections/shoppingcart',
-			{},
+		return $resource('api/collections/shoppingcart/:id',
+			{
+				id: '@_id'
+			},
 			{
 				queryCart: { 
 					method: 'GET', 
@@ -42,6 +44,9 @@ angular.module('ngDay2App')
 				},
 				createCartItem: { 
 					method: 'POST'
+				},
+				deleteItem: { 
+					method: 'DELETE'
 				}
 			});
 	})
@@ -57,7 +62,7 @@ angular.module('ngDay2App')
 				edit: { 
 					method: 'PUT'
 				},
-				delete: { 
+				deleteItem: { 
 					method: 'DELETE'
 				}
 			}

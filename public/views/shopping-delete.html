@@ -1,5 +1,6 @@
-<div ng-controller="EditCartCtrl">
+<div ng-controller="CartCtrl">
 	<h6>Are you sure you want to delete?</h6>
-	{{bauble | json}}
+	{{paramId}}
+	<p>{{bauble.name }}</p>
 	<button ng-click="deleteCartItem()">Delete</button> | <a href="#/add">Go Back</a>
 </div>
