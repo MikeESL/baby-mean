@@ -6,8 +6,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    //'ui.bootstrap'
-    //'ngDay5App.directives'
+    'ui.bootstrap',
+    'ngDay5App.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -67,3 +67,5 @@ angular
         redirectTo: '/'
       });
   });
+angular.module('ngDay5App.directives', []);
+
