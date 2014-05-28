@@ -1,6 +1,7 @@
 'use strict';
 angular.module('ngDay2App')
 	.factory('ShopService', function($resource){
+		console.log("ShopService called")
 		return $resource('api/collections/baubles', {},
 			{
 				queryBaub: {

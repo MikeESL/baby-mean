@@ -10,31 +10,80 @@
 </div>
 <a ng-href="#/add"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
 <div data-ng-repeat="bauble in baubles">
-    
+  
+<!-- failed Tabs Directive ASK CALVIN ABOUT THIS!!!!
+  <div ng-controller="TabsDemoCtrl">
+
+  <p>View Details on this Bauble:</p>
+  <p>
+    <button class="btn btn-default btn-sm" ng-click="tabs[0].active = true">View Photo 1</button>
+    <button class="btn btn-default btn-sm" ng-click="tabs[1].active = true">View Photo 2</button>
+    <button class="btn btn-default btn-sm" ng-click="tabs[2].active = true">View Photo 3</button>
+    <button class="btn btn-default btn-sm" ng-click="tabs[3].active = true">Read Bauble Description</button>
+    <button class="btn btn-default btn-sm" ng-click="tabs[4].active = true">See Price</button>
+  </p>
+  
+  <hr />
+
+  <tabset>
+    <tab heading="Static title">Bauble</tab>
+    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+      {{tab.content}}
+    </tab>
+    <tab select="alertMe()">
+      <tab-heading>
+        <i class="glyphicon glyphicon-bell"></i> Alert!
+      </tab-heading>
+      I've got an HTML heading, and a select callback. Pretty cool!
+    </tab> 
+  </tabset>
+  </div>  
+  END FAILED DIRECTIVE -->
       
         <h4>{{bauble.name | uppercase}}</h4> 
         <img ng-src="{{bauble.img1}}"></img>
         <h5>{{bauble.price | currency}}</h5>
 
+
+        <div ng-controller="CollapseDemoCtrl">
+  <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">View More!</button>
+  <hr>
+  <div collapse="isCollapsed">
+    <div class="well well-lg">
+
         <div ng-controller="ViewsCtrl as tab">
             <ul class="tabs">
+              <li ng-class"{active:tab.isSelected(0)}"><a href ng-click="tab.selectTab(0)">See Another View</a></li>
               <li ng-class"{active:tab.isSelected(1)}"><a href ng-click="tab.selectTab(1)">See Another View</a></li>
-              <li ng-class"{active:tab.isSelected(2)}"><a href ng-click="tab.selectTab(2)">See Another View</a></li>
-              <li ng-class"{active:tab.isSelected(3)}"><a href ng-click="tab.selectTab(3)">Read Description</a></li>
+              <li ng-class"{active:tab.isSelected(2)}"><a href ng-click="tab.selectTab(2)">Read Description</a></li>
             </ul>
-            <div class="tabsView" ng-show="tab.isSelected(1)"><img ng-src="{{bauble.img2}}"></img>
+            <div class="tabsView" ng-show="tab.isSelected(0)"><img ng-src="{{bauble.img2}}"></img>
             </div>
-            <div class="tabsView" ng-show="tab.isSelected(2)"><img ng-src="{{bauble.img3}}"></img>
+            <div class="tabsView" ng-show="tab.isSelected(1)"><img ng-src="{{bauble.img3}}"></img>
             </div>
-            <div class="tabsView" ng-show="tab.isSelected(3)"><h6>{{bauble.description}}</h6>
+            <div class="tabsView" ng-show="tab.isSelected(2)"><h6>{{bauble.description}}</h6>
             </div>
         </div>
-               
-      <div ng-controller="CartCtrl">
+      </div> 
+
+<div ng-controller="CartCtrl">
         <p>Quantity</p>
         <input type="number" ng-model="bauble.quantity">
         <button data-ng-click="addedBauble(bauble)" class="btn btn-success">Add to Cart</button>
       </div>
+       
+  </div>       
+      
+
+
+
+      
+
+        </div>
+
+        
+               
+      
 
         
 </div>

@@ -20,6 +20,11 @@
         <h5>{{bauble.price | currency}}</h5>
         <div> <a href="#/bauble/{{bauble._id}}/edit">Edit</a> | <a href="#/bauble/{{bauble._id}}/delete">Delete</a>
          </div> 
+<div ng-controller="CollapseDemoCtrl">
+  <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">View More!</button>
+  <hr>
+  <div collapse="isCollapsed">
+    <div class="well well-lg">
 
         <div ng-controller="ViewsCtrl as tab">
             <ul class="tabs">
@@ -33,7 +38,9 @@
             </div>
             <div class="tabsView" ng-show="tab.isSelected(2)"><h6>{{bauble.description}}</h6>
             </div>
-               
+        </div>
+      </div>  
+  </div>       
       
 
         </div>
