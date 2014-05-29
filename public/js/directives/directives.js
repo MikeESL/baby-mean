@@ -1,16 +1,37 @@
-angular.module('ngDay5App.directives')
-	.directive('myDirective', function(){
-		return{
-			restrict: 'E',
-			templateURL: 'views/directiveDemo.html'
-		}
-	});
+// ----custom directive ------------------- //
+angular.module('ngDay5App.directives', []);
+angular.module('ngDay5App.directives').directive('myDirective', function () {
+    return {
+        restrict: 'A',
+        template: '<span>{{label}}</span>',
+        link: function (scope, el, attrs) {
+            scope.label = attrs.popoverLabel;
+            $(el).popover({
+                trigger: 'hover',
+                html: true,
+                content: attrs.popoverHtml,
+                placement: attrs.popoverPlacement
+            });
+        }
+    };
+});
 
 
+
+
+
+
+
+
+
+
+// -- standard pop-over directive -----//
 var PopoverDemoCtrl = function ($scope) {
-  $scope.dynamicPopover = 'Hello, World!';
-  $scope.dynamicPopoverTitle = 'Title';
+  $scope.dynamicPopover = '';
+  $scope.dynamicPopoverTitle = '';
 };
+// -----
+
 var TooltipDemoCtrl = function ($scope) {
   $scope.dynamicTooltip = 'Hello, World!';
   $scope.dynamicTooltipText = 'dynamic';
@@ -32,3 +53,5 @@ var TooltipDemoCtrl = function ($scope) {
 function CollapseDemoCtrl($scope) {
   $scope.isCollapsed = true;
 }
+
+

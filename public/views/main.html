@@ -10,10 +10,27 @@
 </div>
 
 <div class="jumbotron">
-	<div class="span4 offset4 text-center">
-	  <h1>Hooked on Baubles</h1>
-	  <p><a class="btn btn-lg btn-success" ng-href="#/blog">Go to blog!</a></p>
-	  <p><a class="btn btn-lg btn-success" ng-href="#/cart">Go to store!</a></p>
+	<div class="span4 offset4 text-center" ng-app="ngDay5App.directive">
+	  <h2><span my-directive popover-html="Check out our store!!" popover-placement="bottom" popover-label="Hooked on Baubles"></span></h2>
+    <p><a class="btn btn-lg btn-success" ng-href="#/cart">Go to store!</a></p>
+	  <p><a class="btn btn-lg btn-success" ng-href="#/blog">Go to blog!</a></my-directive>
+
+      <!-- <div ng-app="ngDay5App.directives">
+    <div> <span my-directive popover-html="Check out our store!!" popover-placement="bottom" popover-label="Bauble"></span> -->
+
+    </div>
+</div>
+
+          </div>
+      </div>
+	  
+
+    </div>
+</div>
+
+    </div>
+</div>
+
 	</div> 
 </div>
 
