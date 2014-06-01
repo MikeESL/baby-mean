@@ -1,21 +1,38 @@
-// ----custom directive ------------------- //
-angular.module('ngDay5App.directives', []);
-angular.module('ngDay5App.directives').directive('myDirective', function () {
-    return {
-        restrict: 'A',
-        template: '<span>{{label}}</span>',
-        link: function (scope, el, attrs) {
-            scope.label = attrs.popoverLabel;
-            $(el).popover({
-                trigger: 'hover',
-                html: true,
-                content: attrs.popoverHtml,
-                placement: attrs.popoverPlacement
-            });
-        }
-    };
+// ----custom directives ------------------- //
+
+angular.module('ngDay5App.directives')
+	.directive('myDirective', function () {
+	    return {
+	        restrict: 'A',
+	        template: '<span>{{label}}</span>',
+	        link: function (scope, element, attrs) {
+	            scope.label = attrs.popoverLabel;
+	            element.popover({
+	                trigger: 'hover',
+	                html: true,
+	                content: attrs.popoverHtml,
+	                placement: attrs.popoverPlacement
+	            });
+	        }
+	    };
 });
 
+ angular.module('ngDay5App.directives')
+ 	.directive('newDirective', function() {
+ 		return {
+ 			restrict: 'AE',
+ 			scope: {
+ 				bauble: '@',
+ 			},
+ 			templateUrl: 'views/directiveDemo.html',	
+ 			link: function(scope, element, attrs) {
+ 				element.on('click', function(e) {
+ 					element.children().appendClass('discount');
+ 				});
+
+ 			}
+ 		}
+ 	})
 
 
 
@@ -25,7 +42,8 @@ angular.module('ngDay5App.directives').directive('myDirective', function () {
 
 
 
-// -- standard pop-over directive -----//
+
+// -- standard directives below -----//
 var PopoverDemoCtrl = function ($scope) {
   $scope.dynamicPopover = '';
   $scope.dynamicPopoverTitle = '';
